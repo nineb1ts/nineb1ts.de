@@ -7,6 +7,7 @@ import JourneyItem from "./components/JourneyItem";
 function App() {
   const introRef = useRef<HTMLElement>(null);
   const [activeLine, setActiveLine] = useState(0);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
   const projects = [
     {
       index: "01",
@@ -72,6 +73,8 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
+      setShowScrollIndicator(window.scrollY < 100);
+
       const section = introRef.current;
 
       if (!section) {
@@ -93,7 +96,9 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -109,7 +114,11 @@ function App() {
               <Typewriter />
             </div>
           </div>
-          <p className="hero-scroll-indicator">
+          <p
+            className={`hero-scroll-indicator ${
+              showScrollIndicator ? "visible" : ""
+            }`}
+          >
             Scroll <span>↓</span>
           </p>
         </section>
