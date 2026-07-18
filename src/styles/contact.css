@@ -1,0 +1,43 @@
+/*
+  Contact
+*/
+
+.contact {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-block: 8rem;
+}
+
+.contact-content {
+  grid-column: 2 / span 10;
+}
+
+.contact-label {
+  margin: 0 0 1.5rem;
+
+  color: var(--color-text-muted);
+  font-family: monospace;
+}
+
+.contact-content h2 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 2rem;
+
+  color: var(--color-text-muted);
+  font-family: monospace;
+
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--color-text);
+}
