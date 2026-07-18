@@ -136,7 +136,9 @@
   min-height: 100vh;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
+  padding-block: 6rem;
 }
 
 .journey-heading {
@@ -203,7 +205,9 @@
   min-height: 100vh;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
+  padding-block: 6rem;
 }
 
 .projects-heading {
