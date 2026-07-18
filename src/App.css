@@ -125,20 +125,7 @@
 */
 
 .journey {
-  /* padding-block: 10rem; */
-  min-height: 300vh;
-}
-
-.journey-sticky {
-  position: sticky;
-  top: 0;
-
-  min-height: 100vh;
-
-  display: flex;
-  align-items: flex-start;
-
-  padding-block: 6rem;
+  padding-block: 10rem;
 }
 
 .journey-heading {
@@ -146,6 +133,9 @@
 }
 
 .journey-heading p {
+  position: sticky;
+  top: 6rem;
+
   margin: 0;
   color: var(--color-text-muted);
   font-family: monospace;

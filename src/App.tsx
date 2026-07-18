@@ -130,22 +130,20 @@ function App() {
         </section>
 
         <section className="journey">
-          <div className="journey-sticky">
-            <div className="container grid">
-              <div className="journey-heading">
-                <p>My Journey</p>
-              </div>
+          <div className="container grid">
+            <div className="journey-heading">
+              <p>My Journey</p>
+            </div>
 
-              <div className="journey-content">
-                {journey.map((item) => (
-                  <JourneyItem
-                    key={`${item.period}-${item.title}`}
-                    period={item.period}
-                    title={item.title}
-                    description={item.description}
-                  />
-                ))}
-              </div>
+            <div className="journey-content">
+              {journey.map((item) => (
+                <JourneyItem
+                  key={`${item.period}-${item.title}`}
+                  period={item.period}
+                  title={item.title}
+                  description={item.description}
+                />
+              ))}
             </div>
           </div>
         </section>
