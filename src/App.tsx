@@ -109,6 +109,9 @@ function App() {
               <Typewriter />
             </div>
           </div>
+          <p className="hero-scroll-indicator">
+            Scroll <span>↓</span>
+          </p>
         </section>
 
         <section className="intro" ref={introRef}>
