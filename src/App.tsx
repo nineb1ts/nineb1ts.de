@@ -2,6 +2,7 @@ import "./App.css";
 import Typewriter from "./Typewriter";
 import { useEffect, useRef, useState } from "react";
 import ProjectItem from "./components/ProjectItem";
+import JourneyItem from "./components/JourneyItem";
 
 function App() {
   const introRef = useRef<HTMLElement>(null);
@@ -35,6 +36,38 @@ function App() {
     //   github: "",
     //   year: "",
     // },
+  ];
+  const journey = [
+    {
+      period: "Today",
+      title: "Application Development",
+      description:
+        "Currently completing my apprenticeship as an IT specialist for application development and continuing to grow as a software developer.",
+    },
+    {
+      period: "Career Change",
+      title: "WBS Coding School",
+      description:
+        "Decided to change careers and dive deeper into software development through an intensive coding program.",
+    },
+    {
+      period: "Professional Experience",
+      title: "A Different Path",
+      description:
+        "Worked in billing before deciding that I wanted to pursue a career that better matched my interest in technology and building things.",
+    },
+    {
+      period: "Studies",
+      title: "Business Administration",
+      description:
+        "Studied Business Administration at Hamm-Lippstadt University of Applied Sciences.",
+    },
+    {
+      period: "The Beginning",
+      title: "HTML & CSS",
+      description:
+        "First encountered web development during my apprenticeship in marketing communication at WESTPRESS — and wrote my first HTML and CSS.",
+    },
   ];
 
   useEffect(() => {
@@ -92,6 +125,25 @@ function App() {
               <p className={activeLine === 2 ? "active" : ""}>
                 Sometimes just because I can.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="journey">
+          <div className="container grid">
+            <div className="journey-heading">
+              <p>My Journey</p>
+            </div>
+
+            <div className="journey-content">
+              {journey.map((item) => (
+                <JourneyItem
+                  key={`${item.period}-${item.title}`}
+                  period={item.period}
+                  title={item.title}
+                  description={item.description}
+                />
+              ))}
             </div>
           </div>
         </section>
