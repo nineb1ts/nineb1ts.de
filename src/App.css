@@ -155,9 +155,17 @@
   padding-block: 2rem;
   border-top: 1px solid var(--color-border);
 
+  opacity: 0;
+  transform: translateY(3rem);
+
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.project-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-item:hover {
@@ -182,6 +190,147 @@
 .project-item p {
   margin: 0;
   color: var(--color-text-muted);
+}
+
+.project-technologies {
+  grid-column: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+
+  margin: 1rem 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.project-technologies li {
+  color: var(--color-text-muted);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.project-meta {
+  grid-column: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  margin-top: 1rem;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.project-link {
+  color: var(--color-text-muted);
+  font-family: monospace;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--color-text);
+}
+
+.project-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+.project-title-row h2 {
+  margin: 0;
+}
+
+.project-year {
+  color: var(--color-text-muted);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/*
+  Contact
+*/
+
+.contact {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-block: 8rem;
+}
+
+.contact-content {
+  grid-column: 2 / span 10;
+}
+
+.contact-label {
+  margin: 0 0 1.5rem;
+
+  color: var(--color-text-muted);
+  font-family: monospace;
+}
+
+.contact-content h2 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 2rem;
+
+  color: var(--color-text-muted);
+  font-family: monospace;
+
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--color-text);
+}
+
+/*
+  Contact
+*/
+
+.footer {
+  padding-block: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--color-text-muted);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--color-text);
 }
 
 /*

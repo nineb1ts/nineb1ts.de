@@ -1,10 +1,40 @@
 import "./App.css";
 import Typewriter from "./Typewriter";
 import { useEffect, useRef, useState } from "react";
+import ProjectItem from "./components/ProjectItem";
 
 function App() {
   const introRef = useRef<HTMLElement>(null);
   const [activeLine, setActiveLine] = useState(0);
+  const projects = [
+    {
+      index: "01",
+      title: "nineb1ts.de",
+      description: "Personal portfolio and playground.",
+      technologies: ["React", "TypeScript", "Vite", "CSS"],
+      url: "https://nineb1ts.de",
+      github: "https://github.com/nineb1ts/nineb1ts.de",
+      year: "2026",
+    },
+    // {
+    //   index: "02",
+    //   title: "Project Two",
+    //   description: "Short description of the project.",
+    //   technologies: ["/"],
+    //   url: "",
+    //   github: "",
+    //   year: "",
+    // },
+    // {
+    //   index: "03",
+    //   title: "Project Three",
+    //   description: "Short description of the project.",
+    //   technologies: ["/"],
+    //   url: "",
+    //   github: "",
+    //   year: "",
+    // },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,26 +102,47 @@ function App() {
             </div>
 
             <div className="projects-list">
-              <article className="project-item">
-                <span className="project-index">01</span>
-                <h2>nineb1ts.de</h2>
-                <p>Personal portfolio and playground.</p>
-              </article>
-
-              <article className="project-item">
-                <span className="project-index">02</span>
-                <h2>Project Two</h2>
-                <p>Short description of the project.</p>
-              </article>
-
-              <article className="project-item">
-                <span className="project-index">03</span>
-                <h2>Project Three</h2>
-                <p>Short description of the project.</p>
-              </article>
+              {projects.map((project) => (
+                <ProjectItem
+                  key={project.index}
+                  index={project.index}
+                  title={project.title}
+                  description={project.description}
+                  technologies={project.technologies}
+                  url={project.url}
+                  github={project.github}
+                  year={project.year}
+                />
+              ))}
             </div>
           </div>
         </section>
+        <section className="contact">
+          <div className="container grid">
+            <div className="contact-content">
+              <p className="contact-label">Get in touch</p>
+
+              <h2>Have something in mind?</h2>
+
+              <a className="contact-link" href="mailto:your@email.com">
+                your@email.com ↗
+              </a>
+            </div>
+          </div>
+        </section>
+        <footer className="footer">
+          <div className="container footer-inner">
+            <span>nineb1ts © 2026</span>
+
+            <a
+              href="https://github.com/nineb1ts"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
+          </div>
+        </footer>
       </main>
     </div>
   );
