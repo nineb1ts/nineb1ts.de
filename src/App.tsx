@@ -16,15 +16,16 @@ function App() {
       github: "https://github.com/nineb1ts/nineb1ts.de",
       year: "2026",
     },
-    // {
-    //   index: "02",
-    //   title: "Project Two",
-    //   description: "Short description of the project.",
-    //   technologies: ["/"],
-    //   url: "",
-    //   github: "",
-    //   year: "",
-    // },
+    {
+      index: "02",
+      title: "Definitely Not Tic-Tac-Toe",
+      description:
+        "A 4×4 strategy game where the goal is to avoid getting three in a row.",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      url: "https://definetlynottictactoe.netlify.app/",
+      github: "https://github.com/nineb1ts/definitely-not-tic-tac-toe",
+      year: "2024",
+    },
     // {
     //   index: "03",
     //   title: "Project Three",
@@ -117,7 +118,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="contact">
+        <section className="contact noselect">
           <div className="container grid">
             <div className="contact-content">
               <p className="contact-label">Get in touch</p>
@@ -130,7 +131,7 @@ function App() {
             </div>
           </div>
         </section>
-        <footer className="footer">
+        <footer className="footer noselect">
           <div className="container footer-inner">
             <span>nineb1ts © 2026</span>
 
