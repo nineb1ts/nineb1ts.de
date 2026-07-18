@@ -39,31 +39,31 @@ function App() {
   ];
   const journey = [
     {
-      period: "Today",
+      period: "2024 – Today",
       title: "Application Development",
       description:
         "Currently completing my apprenticeship as an IT specialist for application development and continuing to grow as a software developer.",
     },
     {
-      period: "Career Change",
+      period: "2023",
       title: "WBS Coding School",
       description:
         "Decided to change careers and dive deeper into software development through an intensive coding program.",
     },
     {
-      period: "Professional Experience",
+      period: "2022",
       title: "A Different Path",
       description:
         "Worked in billing before deciding that I wanted to pursue a career that better matched my interest in technology and building things.",
     },
     {
-      period: "Studies",
+      period: "2014 – 2020",
       title: "Business Administration",
       description:
         "Studied Business Administration at Hamm-Lippstadt University of Applied Sciences.",
     },
     {
-      period: "The Beginning",
+      period: "2010 – 2013",
       title: "HTML & CSS",
       description:
         "First encountered web development during my apprenticeship in marketing communication at WESTPRESS — and wrote my first HTML and CSS.",
