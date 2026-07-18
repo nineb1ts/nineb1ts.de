@@ -8,6 +8,10 @@ function App() {
   const introRef = useRef<HTMLElement>(null);
   const [activeLine, setActiveLine] = useState(0);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const [journeyEnding, setJourneyEnding] = useState(false);
+  const journeyEndRef = useRef<HTMLDivElement | null>(null);
+  const [projectsEnding, setProjectsEnding] = useState(false);
+  const projectsEndRef = useRef<HTMLDivElement | null>(null);
   const projects = [
     {
       index: "01",
@@ -101,6 +105,52 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const element = journeyEndRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setJourneyEnding(entry.isIntersecting);
+      },
+      {
+        rootMargin: "0px 0px -95% 0px",
+      },
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const element = projectsEndRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setProjectsEnding(entry.isIntersecting);
+      },
+      {
+        rootMargin: "0px 0px -95% 0px",
+      },
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="page">
       <main>
@@ -143,7 +193,9 @@ function App() {
 
         <section className="journey">
           <div className="container grid">
-            <div className="journey-heading">
+            <div
+              className={`journey-heading ${journeyEnding ? "is-faded" : ""}`}
+            >
               <p>My Journey</p>
             </div>
 
@@ -156,13 +208,17 @@ function App() {
                   description={item.description}
                 />
               ))}
+
+              <div ref={journeyEndRef} />
             </div>
           </div>
         </section>
 
         <section className="projects">
           <div className="container grid">
-            <div className="projects-heading">
+            <div
+              className={`projects-heading ${projectsEnding ? "is-faded" : ""}`}
+            >
               <p>Selected Projects</p>
             </div>
 
@@ -179,6 +235,8 @@ function App() {
                   year={project.year}
                 />
               ))}
+
+              <div ref={projectsEndRef} />
             </div>
           </div>
         </section>
@@ -196,6 +254,7 @@ function App() {
             </div>
           </div>
         </section>
+
         <footer className="footer noselect">
           <div className="container footer-inner">
             <span>nineb1ts © 2026</span>

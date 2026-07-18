@@ -169,6 +169,11 @@
 
 .journey-heading {
   grid-column: 1 / span 3;
+  transition: opacity 0.4s ease;
+}
+
+.journey-heading.is-faded {
+  opacity: 0.35;
 }
 
 .journey-heading p {
@@ -228,6 +233,11 @@
 
 .projects-heading {
   grid-column: 1 / span 3;
+  transition: opacity 0.4s ease;
+}
+
+.projects-heading.is-faded {
+  opacity: 0.35;
 }
 
 .projects-heading p {
