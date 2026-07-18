@@ -125,7 +125,18 @@
 */
 
 .projects {
-  padding-block: 10rem;
+  /* padding-block: 10rem; */
+  min-height: 250vh;
+}
+
+.projects-sticky {
+  position: sticky;
+  top: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
 }
 
 .projects-heading {
