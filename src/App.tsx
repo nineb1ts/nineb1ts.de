@@ -1,4 +1,5 @@
 import "./App.css";
+import Typewriter from "./Typewriter";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
                 nineb<span className="one">1</span>t<span className="s">s</span>
               </h1>
 
-              <p className="hero-subtitle">&gt; sharpening claws...</p>
+              <Typewriter />
             </div>
           </div>
         </section>
