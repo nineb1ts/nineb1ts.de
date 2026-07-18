@@ -43,7 +43,7 @@ function App() {
       period: "2024 – Today",
       title: "Application Development",
       description:
-        "Currently completing my apprenticeship as an IT specialist for application development and continuing to grow as a software developer.",
+        "Currently completing my apprenticeship as an IT specialist for application development at adesso SE in Dortmund, gaining hands-on experience and continuing to grow as a software developer.",
     },
     {
       period: "2023",
