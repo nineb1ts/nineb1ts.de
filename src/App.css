@@ -360,6 +360,10 @@
     --page-padding: 16px;
   }
 
+  .intro {
+    min-height: 250vh;
+  }
+
   .projects-heading,
   .projects-list,
   .project-item,
