@@ -125,8 +125,8 @@ function App() {
 
               <h2>Have something in mind?</h2>
 
-              <a className="contact-link" href="mailto:your@email.com">
-                your@email.com ↗
+              <a className="contact-link" href="#">
+                Email coming soon ↗
               </a>
             </div>
           </div>
