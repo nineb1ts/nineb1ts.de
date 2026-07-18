@@ -2,9 +2,12 @@
 
 > curiosity is compiling...
 
-Personal portfolio and playground of **nineb1ts**.
+Personal portfolio and digital playground of **nineb1ts**.
 
 The site is built with React, TypeScript and Vite and deployed automatically to GitHub Pages.
+
+<br>
+<br>
 
 ## Tech Stack
 
