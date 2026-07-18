@@ -359,4 +359,47 @@
   :root {
     --page-padding: 16px;
   }
+
+  .projects-heading,
+  .projects-list,
+  .project-item,
+  .project-title-row,
+  .project-meta {
+    grid-column: 1 / -1;
+  }
+
+  .projects-heading {
+    margin-bottom: 3rem;
+  }
+
+  .project-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-index {
+    grid-row: auto;
+  }
+
+  .project-title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .project-technologies {
+    gap: 0.5rem 1rem;
+  }
+
+  .project-item h2 {
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
+  }
 }
