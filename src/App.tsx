@@ -149,26 +149,24 @@ function App() {
         </section>
 
         <section className="projects">
-          <div className="projects-sticky">
-            <div className="container grid">
-              <div className="projects-heading">
-                <p>Selected Projects</p>
-              </div>
+          <div className="container grid">
+            <div className="projects-heading">
+              <p>Selected Projects</p>
+            </div>
 
-              <div className="projects-list">
-                {projects.map((project) => (
-                  <ProjectItem
-                    key={project.index}
-                    index={project.index}
-                    title={project.title}
-                    description={project.description}
-                    technologies={project.technologies}
-                    url={project.url}
-                    github={project.github}
-                    year={project.year}
-                  />
-                ))}
-              </div>
+            <div className="projects-list">
+              {projects.map((project) => (
+                <ProjectItem
+                  key={project.index}
+                  index={project.index}
+                  title={project.title}
+                  description={project.description}
+                  technologies={project.technologies}
+                  url={project.url}
+                  github={project.github}
+                  year={project.year}
+                />
+              ))}
             </div>
           </div>
         </section>
