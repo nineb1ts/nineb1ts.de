@@ -64,6 +64,34 @@ function App() {
             </div>
           </div>
         </section>
+
+        <section className="projects">
+          <div className="container grid">
+            <div className="projects-heading">
+              <p>Selected Projects</p>
+            </div>
+
+            <div className="projects-list">
+              <article className="project-item">
+                <span className="project-index">01</span>
+                <h2>nineb1ts.de</h2>
+                <p>Personal portfolio and playground.</p>
+              </article>
+
+              <article className="project-item">
+                <span className="project-index">02</span>
+                <h2>Project Two</h2>
+                <p>Short description of the project.</p>
+              </article>
+
+              <article className="project-item">
+                <span className="project-index">03</span>
+                <h2>Project Three</h2>
+                <p>Short description of the project.</p>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
