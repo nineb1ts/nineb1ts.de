@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="page">
       <main>
-        <section className="hero">
+        <section className="hero noselect">
           <div className="container grid">
             <div className="hero-content">
               <h1 className="hero-title">
