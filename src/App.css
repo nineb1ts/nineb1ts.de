@@ -473,8 +473,14 @@
     grid-column: 1 / -1;
   }
 
-  .journey-heading {
-    margin-bottom: 3rem;
+  .journey-heading,
+  .projects-heading {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    padding-block: 1rem;
+    background: var(--color-background);
   }
 
   .journey-item {
@@ -488,10 +494,6 @@
   .project-title-row,
   .project-meta {
     grid-column: 1 / -1;
-  }
-
-  .projects-heading {
-    margin-bottom: 3rem;
   }
 
   .project-item {
