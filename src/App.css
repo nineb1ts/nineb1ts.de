@@ -355,9 +355,12 @@
 
 .project-title-row h2 {
   margin: 0;
+  flex: 1;
 }
 
 .project-year {
+  flex-shrink: 0;
+
   color: var(--color-text-muted);
   font-family: monospace;
   font-size: 0.9rem;
