@@ -105,11 +105,20 @@
   list-style: none;
 }
 
+.tech-badge {
+  display: inline-block;
+
+  padding: 0.25rem 0.6rem;
+  border: 1px solid currentColor;
+
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
 .project-link {
   color: var(--color-text-muted);
   font-family: monospace;
   font-size: 0.9rem;
-  margin-left: 0.5rem;
 
   transition: color 0.3s ease;
 }
@@ -136,6 +145,30 @@
   color: var(--color-text-muted);
   font-family: monospace;
   font-size: 0.9rem;
+}
+
+.tech-badge[data-tech="react"] {
+  color: #5eb8d1;
+}
+
+.tech-badge[data-tech="typescript"] {
+  color: #4d88c7;
+}
+
+.tech-badge[data-tech="javascript"] {
+  color: #d6ad32;
+}
+
+.tech-badge[data-tech="html"] {
+  color: #d86b45;
+}
+
+.tech-badge[data-tech="css"] {
+  color: #687bd8;
+}
+
+.tech-badge[data-tech="vite"] {
+  color: #9470c8;
 }
 
 @media (max-width: 600px) {

@@ -71,7 +71,11 @@ function ProjectItem({
       <div className="project-meta">
         <ul className="project-technologies">
           {technologies.map((technology) => (
-            <li key={technology}>{technology}</li>
+            <li key={technology}>
+              <span className="tech-badge" data-tech={technology.toLowerCase()}>
+                {technology}
+              </span>
+            </li>
           ))}
         </ul>
 

@@ -1,0 +1,207 @@
+/*
+  Skills
+*/
+
+.skills {
+  padding-block: 5rem;
+}
+
+.skills-heading {
+  grid-column: 1 / span 3;
+  transition: opacity 0.4s ease;
+}
+
+.skills-heading.is-faded {
+  opacity: 0.35;
+}
+
+.skills-heading p {
+  position: sticky;
+  top: 6rem;
+
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: monospace;
+}
+
+.skills-list {
+  grid-column: 5 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 2rem;
+}
+
+.skills-group {
+  min-width: 0;
+}
+
+.skills-category {
+  margin: 0 0 1rem;
+
+  color: var(--color-text-muted);
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills-list .tech-badge {
+  display: inline-block;
+
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--color-border);
+
+  color: #a8a8a8;
+  font-family: monospace;
+  font-size: 0.9rem;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.skills-list .tech-badge:hover {
+  color: var(--tech-color, var(--color-text));
+  border-color: var(--tech-color, var(--color-text));
+}
+
+/*
+  Frontend
+*/
+
+.tech-badge[data-tech="react"] {
+  --tech-color: #5eb8d1;
+}
+
+.tech-badge[data-tech="typescript"] {
+  --tech-color: #4d88c7;
+}
+
+.tech-badge[data-tech="javascript"] {
+  --tech-color: #d6ad32;
+}
+
+.tech-badge[data-tech="html"] {
+  --tech-color: #d86b45;
+}
+
+.tech-badge[data-tech="css"] {
+  --tech-color: #687bd8;
+}
+
+.tech-badge[data-tech="mui"] {
+  --tech-color: #4f8edc;
+}
+
+.tech-badge[data-tech="bootstrap"] {
+  --tech-color: #8a6fd1;
+}
+
+.tech-badge[data-tech="vite"] {
+  --tech-color: #9470c8;
+}
+
+/*
+  Backend
+*/
+
+.tech-badge[data-tech="c#"] {
+  --tech-color: #8a70c9;
+}
+
+.tech-badge[data-tech=".net"] {
+  --tech-color: #7b6fd0;
+}
+
+.tech-badge[data-tech="asp.net core"] {
+  --tech-color: #6f78c9;
+}
+
+.tech-badge[data-tech="signalr"] {
+  --tech-color: #8d6fc7;
+}
+
+/*
+  Testing
+*/
+
+.tech-badge[data-tech="xunit"] {
+  --tech-color: #6fbf8f;
+}
+
+/*
+  Databases
+*/
+
+.tech-badge[data-tech="mongodb"] {
+  --tech-color: #5f9f65;
+}
+
+.tech-badge[data-tech="postgresql"] {
+  --tech-color: #5f83aa;
+}
+
+/*
+  Tools
+*/
+
+.tech-badge[data-tech="git"] {
+  --tech-color: #c86a4b;
+}
+
+.tech-badge[data-tech="github"] {
+  --tech-color: #b0b0b0;
+}
+
+.tech-badge[data-tech="docker"] {
+  --tech-color: #4a9ed8;
+}
+
+.tech-badge[data-tech="podman"] {
+  --tech-color: #8b6fc9;
+}
+
+.tech-badge[data-tech="postman"] {
+  --tech-color: #d8784f;
+}
+
+.tech-badge[data-tech="azure devops"] {
+  --tech-color: #4e8bc9;
+}
+
+.tech-badge[data-tech="azure portal"] {
+  --tech-color: #5d95c9;
+}
+
+.skills-end {
+  grid-column: 1 / -1;
+  height: 0;
+}
+
+@media (max-width: 600px) {
+  .skills-heading,
+  .skills-list {
+    grid-column: 1 / -1;
+  }
+
+  .skills-heading {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    padding-block: 1rem;
+    background: var(--color-background);
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
